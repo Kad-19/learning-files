@@ -1,16 +1,16 @@
-#ifndef main_h
-#define main_h
+#ifndef MAIN_H
+#define MAIN_H
+#include <stdio.h>
+#include <unistd.h>
+#include <string.h>
+#include <stdarg.h>
 
-int _putchar(char);
-void _puts_recursion(char *s);
-void _print_rev_recursion(char *s);
-int _strlen_recursion(char *s);
-int factorial(int n);
-int _pow_recursion(int x, int y);
-int _sqrt_recursion(int n);
-int is_prime_number(int n);
-int check_prime(int n, int i);
-int wildcmp(char *s1, char *s2);
-void _rev_recursion(char *s, char *r, int i);
+int _printf(const char *format, ...);
+void format_string(va_list arg, const char *format, char spec[], char res[]);
+void concat(char result[], char ch, char specifier[]);
+void chtoStrcat(char *str, char ch);
+void check_specifier(char specifier[], char format);
+void print_binary(char *result, int num, char specifier[]);
+void print_string(char *result, char *str, char specifier[]);
 
 #endif
